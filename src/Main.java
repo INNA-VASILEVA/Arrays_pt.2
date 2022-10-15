@@ -1,12 +1,19 @@
 import java.util.Arrays;
-public class Main {
-    public static void main(String[] args) {
+public class Main  {
+        public static int[] generateRandomArray() {
+            java.util.Random random = new java.util.Random();
+            int[] totalMoneyMonth = new int[30];
+            for (int i = 0; i < totalMoneyMonth.length; i++) {
+                totalMoneyMonth[i] = random.nextInt(100_000) + 100_000;
+            }
+            return totalMoneyMonth;
+        }
 
+        public static void main(String[] args) {
         //Задание 1
         System.out.println("Задание 1");
-        int[] totalMoneyMonth = new int[30];
+        int[] totalMoneyMonth = generateRandomArray();
         for (int i = 0; i < totalMoneyMonth.length; i++) {
-            totalMoneyMonth[i] = ((int) (Math.random() * 100_000) + 200_000 - 100_000);
             System.out.print(totalMoneyMonth[i] + " ");
         }
         int sum = 0;
